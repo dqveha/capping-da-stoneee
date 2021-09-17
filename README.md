@@ -9,4 +9,5 @@
 * 13:10 -- Finished installing Ruby/RoR within local machine
 * 13:52 -- Looking into using an API for chat function/message system with Stream; https://github.com/GetStream/website-react-examples/tree/master/customer-support
 * 14:53 -- Moved from another directory to this directory to work with newly installed Ruby/Rails instead of Docker
-* 16:01 -- Trying to setup an API/SMTP Relay with SendGrid
+* 16:01 -- Trying to setup an API/SMTP Relay with SendGrid; https://www.youtube.com/watch?v=sVJRkTxqlSQ
+* 16:53 -- Currently unsuccessful with SendGrid due to them freezing my account. Sent an email in response to detail why my account may seem "suspicious"; told them I am an Epicodus student who wishes to utilize their services for sending email confirmations.
