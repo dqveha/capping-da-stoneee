@@ -9,3 +9,4 @@
 * 13:10 -- Finished installing Ruby/RoR within local machine
 * 13:52 -- Looking into using an API for chat function/message system with Stream; https://github.com/GetStream/website-react-examples/tree/master/customer-support
 * 14:53 -- Moved from another directory to this directory to work with newly installed Ruby/Rails instead of Docker
+* 16:01 -- Trying to setup an API/SMTP Relay with SendGrid
