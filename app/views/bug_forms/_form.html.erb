@@ -1,0 +1,17 @@
+<%= form_with(model: bug_form) do |form| %>
+  <% if bug_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bug_form.errors.count, "error") %> prohibited this bug_form from being saved:</h2>
+
+      <ul>
+        <% bug_form.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

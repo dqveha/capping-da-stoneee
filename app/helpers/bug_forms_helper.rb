@@ -1,0 +1,2 @@
+module BugFormsHelper
+end

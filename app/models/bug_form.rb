@@ -1,0 +1,2 @@
+class BugForm < ApplicationRecord
+end
