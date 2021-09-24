@@ -13,7 +13,7 @@ class BugFormsController < ApplicationController
   # GET /bug_forms/new
   def new
     @bug_form = BugForm.new
-    render :index
+    render :new
   end
 
   # GET /bug_forms/1/edit

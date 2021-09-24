@@ -16,3 +16,4 @@
 #### Friday, 09/24
 * 8:02 -- Setting up a form
 * 9:33 -- Having difficulty accessing PSQL
+* 10:24 -- Got form to go through after creating dummy user with -1 as ID
