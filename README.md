@@ -11,3 +11,7 @@
 * 14:53 -- Moved from another directory to this directory to work with newly installed Ruby/Rails instead of Docker
 * 16:01 -- Trying to setup an API/SMTP Relay with SendGrid; https://www.youtube.com/watch?v=sVJRkTxqlSQ
 * 16:53 -- Currently unsuccessful with SendGrid due to them freezing my account. Sent an email in response to detail why my account may seem "suspicious"; told them I am an Epicodus student who wishes to utilize their services for sending email confirmations.
+
+
+#### Friday, 09/24
+* 8:02 -- Setting up a form
