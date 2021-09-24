@@ -1,23 +1,2 @@
 <h1>Bug Tracker</h1>
 
-<%= form_for @bug_form do |f| %>
-  <table>
-        <tr>
-          <td><%= f.label :priority %></td>
-          <td><%= f.select :priority, [['Low', '1'], ['Medium', '22'], ['High', '333'], ['Urgent', '4444']] %></td>
-          <%# Urgent => can be only chosen by admin? %>
-          <%# Make documentation indicating what is 'Low', 'Medium', etc. %>
-        </tr>
-        <tr>
-          <td><%= f.label :bug_behavior %></td>
-          <td><%= f.text_field :bug_behavior %></td>
-        </tr>
-        <tr>
-          <td><%= f.label :reproducibility %></td>
-          <td><%= f.text_field :reproducibility %></td>
-        </tr>
-        <tr>
-          <td colspan="2"><%= f.submit "Submit"%></td>
-        </tr>
-    </table>
-  <% end %>

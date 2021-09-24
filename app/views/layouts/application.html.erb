@@ -8,13 +8,30 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   </head>
 
   <body>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Buggoff!</a>
+            <ul class="right">
+              <li><a href="/users/sign_up">Create an Account</a></li>
+              <li><%= link_to "Create an Account", new_user_registration_path unless current_user %></li>
+              <li><%= link_to "Sign In", new_user_session_path unless current_user %></li>
+              <li><%= link_to "Edit Account", edit_user_registration_path if current_user %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete if current_user %></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2><%= flash[:notice] %></h2>
+      <h2><%= flash[:error] %></h2>
+      <%= yield %>
+    </main>
   </body>
 </html>

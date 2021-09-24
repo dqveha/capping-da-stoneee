@@ -26,11 +26,9 @@ class BugFormsController < ApplicationController
 
     respond_to do |format|
       if @bug_form.save
-        format.html { redirect_to @bug_form, notice: "Bug form was successfully created." }
-        format.json { render :show, status: :created, location: @bug_form }
+        format.html { render :index, notice: "Bug successfully added to ticket queue." }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @bug_form.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -40,10 +38,8 @@ class BugFormsController < ApplicationController
     respond_to do |format|
       if @bug_form.update(bug_form_params)
         format.html { redirect_to @bug_form, notice: "Bug form was successfully updated." }
-        format.json { render :show, status: :ok, location: @bug_form }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @bug_form.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +49,6 @@ class BugFormsController < ApplicationController
     @bug_form.destroy
     respond_to do |format|
       format.html { redirect_to bug_forms_url, notice: "Bug form was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
