@@ -17,8 +17,19 @@
     <%= form_for @bug_form do |f| %>
   <table>
         <tr>
-          <td><%= f.label :priority %></td>
-          <td><%= f.select :priority, [['Low', '1'], ['Medium', '22'], ['High', '333'], ['Urgent', '4444']] %></td>
+          <td>
+            <div class="input-field">
+              <select id="bug_form_priority" name="bug_form[priority]">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Low</option>
+                <option value="22">Medium</option>
+                <option value="333">High</option>
+                <option value="4444">Urgent</option>
+              </select>
+              <label>Priority</label>
+            </div>
+          </td>
+          
           <%# Urgent => can be only chosen by admin? %>
           <%# Make documentation indicating what is 'Low', 'Medium', etc. %>
         </tr>
@@ -27,8 +38,13 @@
           <td><%= f.text_field :bug_behavior %></td>
         </tr>
         <tr>
-          <td><%= f.label :reproducibility %></td>
-          <td><%= f.text_field :reproducibility %></td>
+          <td colspan="2">
+            <label for="bug_form_reproducibility">Reproducibility</label>
+            <div class="input">
+              <textarea id="bug_form_reproducibility" name="bug_form[reproducibility]" class="materialize-textarea"></textarea>
+            </div>
+          </td>
+
         </tr>
         <tr>
           <td colspan="2"><%= f.submit "Submit"%></td>

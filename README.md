@@ -19,8 +19,7 @@
 * 10:24 -- Got form to go through after creating dummy user with -1 as ID
 * 10:34 -- Note to self.. always end with a semi-colon with SQL commands.. *sigh* https://stackoverflow.com/questions/33106370/making-a-basic-query-on-psql-does-not-display-anything
 
-
-
+* 15:09 -- Planning to scrap this project and make another rails/ruby repo; implementation of materialize didn't work out as well as I imagined.
 
 
 ---
