@@ -16,12 +16,11 @@ ActiveRecord::Schema.define(version: 2021_09_17_223319) do
   enable_extension "plpgsql"
 
   create_table "bug_forms", force: :cascade do |t|
-    t.integer "bug_severity"
     t.text "bug_behavior"
     t.text "reproducibility"
-    t.string "status"
+    t.string "status", default: "open"
     t.string "priority"
-    t.integer "user_id"
+    t.integer "user_id", default: -1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

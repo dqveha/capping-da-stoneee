@@ -13,6 +13,7 @@ class BugFormsController < ApplicationController
   # GET /bug_forms/new
   def new
     @bug_form = BugForm.new
+    render :index
   end
 
   # GET /bug_forms/1/edit
@@ -64,6 +65,6 @@ class BugFormsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bug_form_params
-      params.fetch(:bug_form, {})
+      params.require(:bug_form).permit(:bug_behavior, :reproducibility, :priority)
     end
 end
